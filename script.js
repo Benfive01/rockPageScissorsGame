@@ -26,6 +26,19 @@ function checkTheChoices(playerChoice, computerChoice){
     }else if((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'scissors' && computerChoice === 'paper') || (playerChoice === 'paper' && computerChoice === 'rock')){
     return ('You WIN');
     }else{
-    return ('Computer WIN');
+    return ('Computer WINS');
     }
     }
+
+    //initiate the game. player option and computer option needs to be invoked now, otherwise, the value will differ at every point it's invoked
+
+function playGame(){
+    let computerChoice = getComputerChoice();
+    let playerChoice = getPlayerChoice();
+    
+    let result = checkTheChoices(playerChoice, computerChoice);
+    console.log(result);
+    }
+    
+    playGame();
+    
