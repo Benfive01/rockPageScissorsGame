@@ -38,7 +38,7 @@ function playGame(){
     
     let playerScore = 0;
     let computerScore = 0;
-    let numberOfRound = 3;
+    let numberOfRound = 5;
 
     // Using a for loop to run the number of rounds game is played
     for(let count = 0; count < numberOfRound; count++){
