@@ -48,3 +48,10 @@ body{
     margin-top: 3rem;
     text-align: left;
 }
+
+
+
+#winnerDeclaration{
+    color: rgb(10, 190, 121);
+    font-size: 1.1rem;
+}

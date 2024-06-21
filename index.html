@@ -7,9 +7,14 @@
     <title>rockPaperScissors</title>
 <div class="container">
     <h2>Rock, Paper, Scissors Game</h2>
-    <p>To play, click "Play Game" below. Game will run for 5 rounds and winner is announced on the console(press F12 to see result display)</p>
+    <p>To play, click "Play Game" below. Game will run for 5 rounds and winner is announced below</p>
     <button onclick="playGame()" id="clickToPlay">Play Game</button>
-    
+    <div class="outcome">
+        <p id="tieNotice"></p>
+        <p id="playerScoreNotice"></p>
+        <p id="computerScoreNotice"></p>
+        <h3 id="winnerDeclaration"></h3>
+    </div>
 </div>
 </head>
 <body>

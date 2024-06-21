@@ -58,21 +58,19 @@ function playGame(){
     
    //Displaying the outcome of the rounds played in the game
     }
-    console.log(`There was ${numberOfRound - (playerScore + computerScore)} tie`)
-    console.log(`Your Score is ${playerScore} point(s)`)
-    console.log(`Computer Score is ${computerScore} point(s)`)
+    document.getElementById("tieNotice").innerHTML = `* There was ${numberOfRound - (playerScore + computerScore)} tie`
+    document.getElementById("playerScoreNotice").innerHTML = `* Your Score is ${playerScore} point(s)`
+    document.getElementById("computerScoreNotice").innerHTML = `* Computer Score is ${computerScore} point(s)`
+
+    
     if(playerScore > computerScore){
-        console.log("You won with " + playerScore + " out of " + numberOfRound);
+        document.getElementById("winnerDeclaration").innerHTML = "***You won with " + playerScore + " out of " + numberOfRound + " rounds***"
     }else{
-        console.log("Computer won with " + computerScore + " out of " + numberOfRound + " rounds")
+        document.getElementById("winnerDeclaration").innerHTML = "***Computer won with " + computerScore + " out of " + numberOfRound + " rounds***"
     }
 
 }
 
 
-//document.getElementById("clickToPlay").onclick = playGame();
-    //Play the game
-    //playGame();
-    
     
     
