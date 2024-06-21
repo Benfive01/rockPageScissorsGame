@@ -68,8 +68,11 @@ function playGame(){
     }
 
 }
+
+
+//document.getElementById("clickToPlay").onclick = playGame();
     //Play the game
-    playGame();
+    //playGame();
     
     
     
