@@ -21,24 +21,55 @@ function getPlayerChoice(){
 // //check if player's choice is same with computer as this is a tie. Check with other options too
 
 function checkTheChoices(playerChoice, computerChoice){
+   
     if(playerChoice === computerChoice){
     return ("it's a tie");
     }else if((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'scissors' && computerChoice === 'paper') || (playerChoice === 'paper' && computerChoice === 'rock')){
-    return ('You WIN');
+        
+        return ('You WIN');
     }else{
+        
     return ('Computer WINS');
     }
     }
 
-    //initiate the game. player option and computer option needs to be invoked now, otherwise, the value will differ at every point it's invoked
-
+    //initiate the game. 
 function playGame(){
+    
+    let playerScore = 0;
+    let computerScore = 0;
+    let numberOfRound = 3;
+
+    // Using a for loop to run the number of rounds game is played
+    for(let count = 0; count < numberOfRound; count++){
+
+    //player option & computer option needs to be invoked now in a loop. If outside loop, it will just be one valve for all number of iterations
     let computerChoice = getComputerChoice();
     let playerChoice = getPlayerChoice();
     
+    //This includes the score count by increment depending on who wins every round
     let result = checkTheChoices(playerChoice, computerChoice);
-    console.log(result);
-    }
+   if(result === 'You WIN'){
+    playerScore++;
+
+   }else if(result === 'Computer WINS'){
+    computerScore++;
+   }
     
+   //Displaying the outcome of the rounds played in the game
+    }
+    console.log(`There was ${numberOfRound - (playerScore + computerScore)} tie`)
+    console.log(`Your Score is ${playerScore} point(s)`)
+    console.log(`Computer Score is ${computerScore} point(s)`)
+    if(playerScore > computerScore){
+        console.log("You won with " + playerScore + " out of " + numberOfRound);
+    }else{
+        console.log("Computer won with " + computerScore + " out of " + numberOfRound + " rounds")
+    }
+
+}
+    //Play the game
     playGame();
+    
+    
     
