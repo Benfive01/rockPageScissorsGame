@@ -68,7 +68,8 @@ function playGame(){
     }else{
         document.getElementById("winnerDeclaration").innerHTML = "***Computer won with " + computerScore + " out of " + numberOfRound + " rounds***"
     }
-
+    //Show option to pay again when game finishes
+    document.getElementById("clickToPlay").innerHTML = "Play Again";
 }
 
 
